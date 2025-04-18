@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>megserenee</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
@@ -12,10 +19,55 @@
       <div class="back">
         <div class="nav">
           <a href="index.html">home</a>
-          <a href="#">about</a>
+          <a href="about.html">about</a>
           <a href="#">get in touch</a>
         </div>
+        <video autoplay muted playsinline id="intro-video">
+          <source src="/vids/Search.webm" type="video/mp4" />
+        </video>
+        <video autoplay muted playsinline id="name-video">
+          <source src="/vids/name.webm" type="video/mp4" />
+        </video>
+        <div class="file">
+          <div class="title">
+            <p>Hi, I am <br><span>megserenee</span></p>
+            <p class="sub">A digital diary of beauty, self-care, and style.</p>
+            <a href="about.html">
+              <button class="purple-btn">learn about me <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            </a>
+          </div>
+          <div class="pic"></div>
+        </div>
+        
       </div>
     </div>
+    <script>
+      const introVideo = document.getElementById("intro-video");
+      const nameVideo = document.getElementById("name-video");
+      const file = document.querySelector(".file");
+    
+
+      introVideo.addEventListener("ended", () => {
+        introVideo.classList.add("fade-out");
+    
+        setTimeout(() => {
+          introVideo.remove();
+          nameVideo.style.display = "block";
+          nameVideo.play();
+        }, 500);
+      });
+    
+      
+      nameVideo.addEventListener("ended", () => {
+        nameVideo.classList.add("fade-out");
+    
+        setTimeout(() => {
+          nameVideo.remove();
+          file.classList.add("show"); 
+        }, 500); 
+      });
+    </script>
+    
+    
   </body>
 </html>

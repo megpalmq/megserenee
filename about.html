@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>about me</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="back2">
+        <div class="nav2">
+          <a href="index.html">home</a>
+          <a href="about.html">about</a>
+          <a href="#">get in touch</a>
+        </div>
+        <div class="hero">
+          <h1>About Me</h1>
+          <video autoplay muted playsinline id="mockup">
+            <source src="/vids/mockup.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+      <div class="about">
+        <div class="YUH">
+          <div class="about-text">
+            <h2 class="fade-in">Unfiltered</h2>
+            <p class="fade-in">
+              Hi, I'm Megan — I post way too much about skincare, test way too
+              many lip tints, and somehow turned my K-beauty obsession into
+              content people actually watch (still wild). I make videos and
+              posts about makeup, skincare, and everything in between — from
+              honest reviews to “is this viral product actually worth your
+              money?” kind of chaos.
+            </p>
+            <p class="fade-in">
+              I'm not here to gatekeep anything. If it makes my skin look glowy
+              or my makeup routine faster, I'm sharing it. Expect soft glam
+              looks, budget-friendly faves, some unhinged product rankings, and
+              the occasional rant about sunscreen texture
+            </p>
+          </div>
+          <div class="me"></div>
+        </div>
+        <div class="origin">
+          <div class="text">
+            <h2>My Origin Story</h2>
+
+            <p class="fade-in">
+              I didn't plan on becoming the friend everyone texts at 2 a.m.
+              asking “is this toner actually worth it?” — but here we are. My
+              dive into skincare started somewhere between trying to cure high
+              school breakouts and watching one too many 10-step K-beauty
+              routines on YouTube. Spoiler alert: I did not need 3 essences, but
+              the obsession stuck.
+            </p>
+            <p class="fade-in">
+              What started as “just trying to get rid of a pimple before picture
+              day” spiraled into a full-blown love for ingredients, textures,
+              and packaging that looks like it belongs in a candy store.
+              Eventually, I started sharing my trial-and-error chaos online —
+              and somehow people actually cared?! Now I make content that's
+              honest, a little unhinged, and super obsessed with anything that
+              promises glow.
+            </p>
+          </div>
+
+          <div class="makeup">
+            <div class="photo"></div>
+          </div>
+        </div>
+        <div class="WIC">
+          <h2 class="fade-in">What I Create</h2>
+          <div class="bubbles">
+            <div class="bubble fade-in">
+              <h3>Tutorials</h3>
+              <p class="icon">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+              </p>
+              <p>Soft glam tutorials with a side of sass</p>
+            </div>
+            <div class="bubble fade-in">
+              <h3>Product Reviews</h3>
+              <p class="icon"><i class="fa-solid fa-pump-soap"></i></p>
+              <p>I try *way too many* lip products so you don't have to</p>
+            </div>
+            <div class="bubble fade-in">
+              <h3>Reccomendations</h3>
+              <p class="icon"><i class="fa-solid fa-hand-sparkles"></i></p>
+              <p>
+                Stuff I actually use and adore (like, down to the last drop).
+              </p>
+            </div>
+            <div class="bubble fade-in">
+              <h3>Skincare Tips / Routines</h3>
+              <p class="icon"><i class="fa-solid fa-circle-info"></i></p>
+              <p>Skincare + makeup secrets I swear by (no filters needed).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mission">
+        <p>
+          "Whether you’re a beginner or a beauty buff, this space is yours too."
+        </p>
+      </div>
+      <div class="end">
+        <h2>Fun Facts About Me(g)a
+        </h2>
+        <span>(see what I did there?)</span>
+        <div class="bubbles-wrap">
+          <div class="fact-bubble">
+            👶 I once used body glitter as highlighter… and it kinda slayed
+          </div>
+          <div class="fact-bubble">
+            I'm learning Korean — mostly so I can read skincare labels
+          </div>
+          <div class="fact-bubble">
+            🍜 I believe ramen is a personality trait
+          </div>
+          <div class="fact-bubble">
+            I will romanticize making to-do lists.
+          </div>
+          <div class="fact-bubble">
+            🌙 Most creative at 2am with a sheet mask on
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const faders = document.querySelectorAll(".fade-in");
+
+      const appearOnScroll = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            } else {
+              entry.target.classList.remove("visible");
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+
+      faders.forEach((el) => appearOnScroll.observe(el));
+    </script>
+  </body>
+</html>

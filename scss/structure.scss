@@ -16,3 +16,37 @@ h6,
 p {
   margin-bottom: 16px;
 }
+@font-face {
+  font-family: popM;
+  src: url(../fonts/Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: popB;
+  src: url(../fonts/Poppins-Bold.ttf);
+}
+#intro-video {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  height: 80%;
+}
+#intro-video.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+#name-video {
+  display: none;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 2;
+  left:480px;
+  ;
+}
+#name-video.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease;
+}

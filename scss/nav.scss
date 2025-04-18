@@ -5,12 +5,21 @@
   gap: 100px;
   background-color: white;
   width: 70%;
+  box-shadow: 10px 5px 20px 5px #e1c0ff;
   border-radius: 40px;
   height: 70px;
+  position: relative;
+  top: 50px;
   align-items: center;
   box-shadow: black;
   a {
     text-decoration: none;
-    color: rgb(225, 192, 255);
+    color: #d4b6f2;
+    font-size: 20px;
+    font-family: popM;
+  }
+  :hover{
+    
+    color: rgb(109, 81, 141);
   }
 }
