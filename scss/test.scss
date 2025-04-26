@@ -1,7 +1,7 @@
 .back2 {
   background-image: url(../images/back2-01.jpg);
   width: 100%;
-  height: 1200px;
+  height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -343,6 +343,8 @@
       display: flex;
       flex-direction: column;
       padding: 10px 0;
+      padding-top: 100px;
+      padding-bottom: 100px;
 
       a {
         display: block;
