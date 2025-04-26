@@ -1295,7 +1295,7 @@ p {
     border-radius: 40px;
     height: auto;
     position: relative;
-    top: 0px;
+    top: 100px;
     align-items: center;
     box-shadow: black;
     margin-bottom: 50px;
@@ -1309,7 +1309,7 @@ p {
     margin: 5px 0;
     font-family: hand;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 25px;
   }
   .back2 .nav1 a:hover {
     color: rgb(109, 81, 141);
