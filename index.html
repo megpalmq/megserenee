@@ -109,8 +109,9 @@
     
         // Ensure the video starts playing as soon as the page loads
         if (introVideo) {
+          introVideo.muted = true; // Mute the video for autoplay
           introVideo.play().catch((error) => {
-            // Handle autoplay failure (for example, on mobile where autoplay might be restricted)
+           
             console.log('Autoplay failed, trying to play video after interaction');
           });
     
