@@ -2583,12 +2583,12 @@ body {
   }
   .blog-posts {
     padding: 1rem 1rem;
-    width: 50%;
+    width: 100%;
+    margin: 0 auto;
   }
   .blog-posts .post-preview {
     margin: 0 auto;
     width: 90%;
-    margin-right: 150px;
   }
   .post-preview h2 {
     font-size: 1.2rem;
