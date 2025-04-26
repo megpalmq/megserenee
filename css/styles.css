@@ -2575,7 +2575,7 @@ body {
     font-size: 18px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .blog-hero .nav2 {
     flex-direction: column;
     gap: 10px;
