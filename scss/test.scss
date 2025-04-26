@@ -1,8 +1,406 @@
-.back2{
-    background-image: url(../images/back2.jpg);
-    width: 100%;
-height: 100vh;
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center;
+.back2 {
+  background-image: url(../images/back2-01.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: pink;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 50px;
+  overflow-x: hidden;
+  position: relative;
+
+  .welcome {
+    font-size: 25px;
+    text-align: center;
+    transform: rotate(-5deg);
+    font-family: hand;
+    margin: 0 auto;
+    padding-left: 50px;
+    justify-content: center;
+    display: flex;
+    gap: 150px;
+    opacity: 0;
+    transform: translateY(50px) rotate(-5deg);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    pointer-events: none;
+
+    &.show {
+      opacity: 1;
+      transform: translateY(0) rotate(-5deg);
+      pointer-events: auto;
+    }
+
+    p {
+      width: 200px;
+    }
+
+    span {
+      font-size: 35px;
+      background-color: #fca6d5;
+    }
+  }
+
+  .tape {
+    position: absolute;
+    right: 650px;
+    bottom: 150px;
+    width: 200px;
+    height: 200px;
+    background-image: url(../images/tape.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+
+  .me {
+    background-image: url(../images/meg.PNG);
+    width: 200px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(-3deg);
+    border-radius: 30px;
+  }
+
+  .hover-area1,
+  .hover-area2,
+  .hover-area3,
+  .hover-area4,
+  .hover-area5,
+  .hover-areaSpotify {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 25px;
+    transition: left 0.5s ease;
+
+    .hover-content {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      position: absolute;
+      background-color: rgb(255, 224, 239);
+      border-radius: 20px;
+      padding: 10px;
+      font-family: hand;
+      pointer-events: none;
+    }
+
+    &:hover .hover-content {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    a {
+      text-decoration: none;
+      background-color: rgb(71, 16, 78);
+      padding: 6px;
+      color: white;
+      border-radius: 20px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .hover-areaSpotify {
+    top: 100px;
+    left: 130px;
+    width: 300px;
+    height: 150px;
+  }
+
+  .hover-area1 {
+    top: 400px;
+    left: 130px;
+    width: 300px;
+    height: 150px;
+  }
+
+  .hover-area2 {
+    top: 600px;
+    left: 400px;
+  }
+
+  .hover-area3 {
+    top: 500px;
+    left: 1000px;
+  }
+
+  .hover-area4 {
+    top: 350px;
+    left: 1400px;
+  }
+
+  .hover-area5 {
+    top: -100px;
+    left: 1420px;
+  }
+
+  /* MEDIA QUERIES */
+
+  @media (max-width: 1650px) {
+    .hover-area3 {
+      left: 800px;
+    }
+    .hover-area4 {
+      left: 1250px;
+    }
+    .hover-area5 {
+      left: 1200px;
+    }
+    .tape {
+      right: 550px;
+    }
+  }
+
+  @media (max-width: 1400px) {
+    .hover-area2 {
+      left: 200px;
+    }
+    .hover-area3 {
+      left: 750px;
+    }
+    .hover-area4 {
+      left: 1000px;
+      top: 200px;
+    }
+    .hover-area5 {
+      left: 1000px;
+    }
+    .tape {
+      right: 450px;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    .hover-areaSpotify {
+      width: 250px;
+      height: 100px;
+      font-size: 20px;
+      left: 100px;
+    }
+    .hover-area1 {
+      width: 250px;
+      height: 100px;
+      font-size: 20px;
+      left: 0px;
+    }
+    .hover-area2 {
+      left: 100px;
+    }
+    .hover-area3 {
+      left: 650px;
+    }
+    .hover-area4 {
+      left: 900px;
+    }
+    .hover-area5 {
+      left: 900px;
+    }
+    .tape {
+      right: 350px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .hover-areaSpotify,
+    .hover-area1,
+    .hover-area2,
+    .hover-area3,
+    .hover-area4,
+    .hover-area5 {
+      width: 250px;
+      height: 250px;
+      font-size: 20px;
+    }
+    .hover-areaSpotify {
+      left: 50px;
+    }
+    .hover-area1 {
+      left: 50px;
+    }
+    .hover-area2 {
+      left: 200px;
+    }
+    .hover-area3 {
+      left: 600px;
+      top: 600px;
+    }
+    .hover-area4 {
+      top: 260px;
+      left: 700px;
+      width: 300px;
+    }
+    .hover-area5 {
+      left: 800px;
+      top: 0px;
+    }
+    .tape {
+      right: 200px;
+      width: 150px;
+      height: 150px;
+    }
+  }
+  @media (max-width: 800px) {
+    .welcome {
+      font-size: 20px;
+      gap: 100px;
+      margin-top: 50px;
+    }
+    .hover-areaSpotify,
+    .hover-area1,
+    .hover-area2,
+    .hover-area3,
+    .hover-area4,
+    .hover-area5 {
+      width: 250px;
+      height: 250px;
+      font-size: 20px;
+    }
+    .hover-areaSpotify {
+      left: 50px;
+    }
+    .hover-area1 {
+      left: 50px;
+    }
+    .hover-area2 {
+      left: 200px;
+    }
+    .hover-area3 {
+      left: 450px;
+      top: 500px;
+    }
+    .hover-area4 {
+      top: 260px;
+      left: 300px;
+      width: 300px;
+    }
+    .hover-area5 {
+      left: 600px;
+      top: 100px;
+    }
+
+    .tape {
+      right: 200px;
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .welcome {
+      position: fixed;
+      gap: 120px;
+    }
+    .hover-areaSpotify,
+    .hover-area1,
+    .hover-area2,
+    .hover-area3,
+    .hover-area4,
+    .hover-area5 {
+      width: 200px;
+      height: 200px;
+      font-size: 18px;
+      display: flex;
+    }
+    .hover-areaSpotify {
+      left: 100px;
+      top: 380px;
+      width: 300px;
+      height: 70px;
+      font-size: 20px;
+    }
+    .hover-area1 {
+      left: 20px;
+      top: 500px;
+    }
+    .hover-area2 {
+      left: 20px;
+      top: 720px;
+    }
+    .hover-area3 {
+      left: 300px;
+      top: 740px;
+    }
+    .hover-area4 {
+      left: 300px;
+      top: 460px;
+    }
+    .hover-area5 {
+      left: 400px;
+      top: 300px;
+    }
+    .tape {
+      right: 100px;
+      top: -50px;
+      width: 120px;
+      height: 120px;
+    }
+  }
+  @media (max-width: 460px) {
+    .welcome {
+      position: fixed;
+      gap: 60px;
+      left: -30px;
+    }
+    .me {
+      width: 150px;
+      height: 200px;
+    }
+    .hover-areaSpotify,
+    .hover-area1,
+    .hover-area2,
+    .hover-area3,
+    .hover-area4,
+    .hover-area5 {
+      width: 200px;
+      height: 200px;
+      font-size: 18px;
+      display: flex;
+    }
+    .hover-areaSpotify {
+      left: 100px;
+      top: 380px;
+      width: 300px;
+      height: 50px;
+      font-size: 20px;
+    }
+    .hover-area1 {
+      left: 100px;
+      top: 500px;
+    }
+    .hover-area2 {
+      left: 100px;
+      top: 650px;
+    }
+    .hover-area3 {
+      left: 100px;
+      top: 800px;
+    }
+    .hover-area4 {
+      left: 100px;
+      top: 950px;
+    }
+    .hover-area5 {
+      left: 100px;
+      top: 1100px;
+    }
+    .tape {
+      right: 20px;
+      top: -50px;
+      width: 120px;
+      height: 120px;
+    }
+  }
 }

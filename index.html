@@ -15,59 +15,110 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <div class="back">
-        <div class="nav">
-          <a href="index.html">home</a>
-          <a href="about.html">about</a>
-          <a href="test.html">get in touch</a>
+    <div class="back2">
+      <video autoplay muted playsinline id="intro-video">
+        <source src="/vids/Search.webm" type="video/mp4" />
+      </video>
+      <div class="welcome">
+        <p>
+          Hi I am <br />
+          <span>Megserenee<i class="fa-regular fa-heart"></i></span>
+          <br />
+          <br />
+          click around on my page to learn more about me and my brand!
+        </p>
+        <div class="tape"></div>
+        <div class="me"></div>
+      </div>
+      <div
+        class="hover-areaSpotify"
+        "
+      >
+        <div class="hover-content">
+          <p style="text-align: center">My current vibe 🎧</p>
+          <iframe
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/playlist/5AkjPrO8drjv1UOraZbz84?utm_source=generator&theme=0"
+            width="100%"
+            height="200"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
         </div>
-        <video autoplay muted playsinline id="intro-video">
-          <source src="/vids/Search.webm" type="video/mp4" />
-        </video>
-        <video autoplay muted playsinline id="name-video">
-          <source src="/vids/name.webm" type="video/mp4" />
-        </video>
-        <div class="file">
-          <div class="title">
-            <p>Hi, I am <br><span>megserenee</span></p>
-            <p class="sub">A digital diary of beauty, self-care, and style.</p>
-            <a href="about.html">
-              <button class="purple-btn">learn about me <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
-            </a>
-          </div>
-          <div class="pic"></div>
+      </div>
+      <div class="hover-area1">
+        <div class="hover-content">
+          <p>What is megserenee?</p>
+          <a href="about.html" class="hover-button">learn my lore</a>
         </div>
-        
+      </div>
+
+      <div class="hover-area2">
+        <div class="hover-content">
+          <p>See my content!</p>
+          <a href="content.html" class="hover-button">content</a>
+        </div>
+      </div>
+      <div class="hover-area3">
+        <div class="hover-content">
+          <p>Hair Product Reccomendations!</p>
+          <a href="hair.html" class="hover-button"
+            ><i class="fa-solid fa-arrow-up-right-from-square"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="hover-area4">
+        <div class="hover-content">
+          <p>Makeup Product Reccomendations!</p>
+          <a href="makeup.html" class="hover-button"
+            ><i class="fa-solid fa-arrow-up-right-from-square"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="hover-area5">
+        <div class="hover-content">
+          <p>Fun Facts😊</p>
+          <a href="fun.html" class="hover-button"
+            ><i class="fa-solid fa-arrow-up-right-from-square"></i
+          ></a>
+        </div>
       </div>
     </div>
     <script>
       const introVideo = document.getElementById("intro-video");
-      const nameVideo = document.getElementById("name-video");
-      const file = document.querySelector(".file");
-    
+      const welcome = document.querySelector(".welcome");
 
       introVideo.addEventListener("ended", () => {
         introVideo.classList.add("fade-out");
-    
+
+        setTimeout(() => {
+          introVideo.remove();
+          welcome.classList.add("show");
+        }, 500); // wait for fade-out to finish
+      });
+
+      introVideo.addEventListener("ended", () => {
+        introVideo.classList.add("fade-out");
+
         setTimeout(() => {
           introVideo.remove();
           nameVideo.style.display = "block";
           nameVideo.play();
         }, 500);
       });
-    
-      
+
       nameVideo.addEventListener("ended", () => {
         nameVideo.classList.add("fade-out");
-    
+
         setTimeout(() => {
           nameVideo.remove();
-          file.classList.add("show"); 
-        }, 500); 
+          file.classList.add("show");
+        }, 500);
       });
     </script>
-    
-    
   </body>
 </html>

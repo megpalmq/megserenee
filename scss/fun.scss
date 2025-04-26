@@ -1,0 +1,201 @@
+:root {
+  --bubble-font: "Quicksand", sans-serif;
+}
+
+.bubble-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  .nav2 {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 100px;
+    background-color: white;
+    width: 70%;
+    box-shadow: 10px 5px 20px 5px #ffc0e7;
+    border-radius: 40px;
+    height: 70px;
+    position: relative;
+    top: 20px;
+    align-items: center;
+    box-shadow: black;
+    z-index: 111;
+    margin-bottom: 50px;
+    a {
+      text-decoration: none;
+      color: #ff96c2;
+      font-size: 20px;
+      font-family: popM;
+    }
+    :hover {
+      color: rgb(109, 81, 141);
+    }
+  }
+}
+
+.bubble-page h1 {
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  font-family: popB;
+  color: #e84fb3;
+  background-color: rgb(255, 212, 244);
+  padding: 20px;
+  border-radius: 20px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.bubble-container {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.bubble {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  padding: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes float-diagonal {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(20vw, 30vh);
+  }
+  50% {
+    transform: translate(-10vw, -25vh);
+  }
+  75% {
+    transform: translate(30vw, -10vh);
+  }
+  100% {
+    transform: translate(-25vw, 20vh);
+  }
+}
+@media (max-width: 1400px) {
+  .makeup-recs {
+    .nav2 {
+      width: 80%;
+      gap: 60px;
+
+      a {
+        font-size: 18px;
+      }
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+
+    .makeup-grid {
+      gap: 25px;
+    }
+
+    .makeup-card {
+      img {
+        height: 350px;
+      }
+
+      h3 {
+        font-size: 17px;
+      }
+
+      p {
+        font-size: 13.5px;
+      }
+    }
+
+    .center-btn button {
+      font-size: 17px;
+      padding: 11px 28px;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .bubble-page .nav2 {
+    width: 90%;
+    gap: 50px;
+    height: 60px;
+    top: 10px;
+
+    a {
+      font-size: 18px;
+    }
+  }
+
+  .bubble-page h1 {
+    top: 350px;
+    font-size: 1.6rem;
+    padding: 15px;
+  }
+
+  .bubble {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+}
+
+/* Mobile (phones and smaller devices) */
+@media (max-width: 768px) {
+  .bubble-page .nav2 {
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+    height: auto;
+    padding: 15px 0;
+    top: 10px;
+
+    a {
+      font-size: 16px;
+    }
+  }
+
+  .bubble-page h1 {
+    top: 300px;
+    font-size: 1.3rem;
+    padding: 12px;
+    width: 80%;
+    text-align: center;
+  }
+
+  .bubble {
+    font-size: 0.7rem;
+    padding: 6px;
+  }
+}
+
+/* Extra small (≤ 480px) */
+@media (max-width: 480px) {
+  .bubble-page h1 {
+    font-size: 1.1rem;
+    top: 250px;
+  }
+
+  .bubble {
+    font-size: 0.65rem;
+    padding: 5px;
+  }
+}

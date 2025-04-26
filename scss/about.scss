@@ -22,17 +22,17 @@
       gap: 100px;
       background-color: white;
       width: 70%;
-      box-shadow: 10px 5px 20px 5px #e1c0ff;
+      box-shadow: 10px 5px 20px 5px #ffc0e7;
       border-radius: 40px;
       height: 70px;
       position: relative;
-      top: 50px;
+      top: 0px;
       align-items: center;
       box-shadow: black;
       z-index: 111;
       a {
         text-decoration: none;
-        color: #d4b6f2;
+        color: #ff96c2;
         font-size: 20px;
         font-family: popM;
       }
@@ -45,7 +45,7 @@
       h1 {
         font-family: popB;
         font-size: 70px;
-        color: #a284bf;
+        color: #ff96c2;
         text-align: center;
         position: relative;
         opacity: 0;
@@ -66,7 +66,7 @@
   }
   .about,
   .gradient-background {
-    background: linear-gradient(300deg, #d4b6f2, #ffffff, #ba7cf7);
+    background: linear-gradient(300deg, #f2d8b6, #ffffff, #e6a2be);
     background-size: 180% 180%;
     animation: gradient-animation 18s ease infinite;
     height: 2000px;
@@ -101,12 +101,12 @@
     margin-left: 200px;
     h2 {
       font-family: popB;
-      color: #a284bf;
+      color: #ff96c2;
       font-size: 30px;
     }
     p {
       font-family: popM;
-      color: #a284bf;
+      color: #ff96c2;
     }
   }
   .me {
@@ -130,7 +130,7 @@
     border-radius: 20px;
     margin: 0 auto;
     display: flex;
-    box-shadow: 10px 10px 25px 20px rgba(226, 201, 255, 1);
+    box-shadow: 10px 10px 25px 20px #ff96c2;
 
     .text {
       flex-direction: column;
@@ -138,7 +138,7 @@
       position: relative;
       h2 {
         font-family: popB;
-        color: #a284bf;
+        color: #ff96c2;
         font-size: 30px;
         padding-left: 30px;
         padding-top: 20px;
@@ -146,7 +146,7 @@
 
       p {
         font-family: popM;
-        color: #a284bf;
+        color: #ff96c2;
         padding-left: 30px;
         padding-top: 10px;
         width: 70%;
@@ -189,16 +189,21 @@
 
     h2 {
       font-family: popB;
-      color: #a284bf;
+      color: #ff96c2;
       font-size: 50px;
       padding-left: 100px;
       padding-top: 20px;
       flex: none;
     }
 
-    .bubbles {
+    .bubbless {
       display: flex;
-      .bubble {
+      a {
+        text-decoration: none;
+        width: 100%;
+        margin-right: 100px;
+      }
+      .bubbled {
         flex-direction: column;
         width: 100%;
         height: 350px;
@@ -214,7 +219,7 @@
 
         h3 {
           font-family: popM;
-          color: #a284bf;
+          color: #ff96c2;
           padding-left: 30px;
           padding-top: 10px;
         }
@@ -224,20 +229,20 @@
 
         p {
           font-family: popM;
-          color: #a284bf;
+          color: #ff96c2;
           padding-left: 30px;
           padding-top: 10px;
         }
 
         &:hover {
-          transform: scale(1.05); /* Slightly increase the size of the bubble */
-          background-color: #9b59b6; /* Change background color on hover */
-          box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
+          transform: scale(1.05);
+          background-color: #f7c0e4;
+          box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         &:hover h3,
         &:hover p {
-          color: white; /* Change text color to white on hover */
+          color: white;
         }
       }
     }
@@ -245,7 +250,7 @@
   .mission {
     height: 300px;
     width: 100%;
-    background-color: #d1a9ff;
+    background-color: #ff96c2;
 
     p {
       font-family: popM;
@@ -265,7 +270,7 @@
     h2 {
       font-family: popB;
       font-size: 48px;
-      color: #a284bf;
+      color: #ff96c2;
       margin-bottom: 60px;
     }
 
@@ -277,7 +282,7 @@
 
       .fact-bubble {
         background-color: #fff;
-        border: 2px dashed #a284bf;
+        border: 2px dashed #ff96c2;
         border-radius: 50%;
         width: 220px;
         height: 220px;
@@ -286,7 +291,7 @@
         justify-content: center;
         font-family: popM;
         font-size: 16px;
-        color: #7a5d9d;
+        color: rgb(199, 125, 166);
         padding: 30px;
         text-align: center;
         transition: transform 0.4s ease, box-shadow 0.3s ease;
@@ -312,4 +317,502 @@
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+@media (max-width: 1400px) {
+  .wrapper {
+    height: auto;
+    .back2 {
+      .nav2 {
+        width: 80%;
+        gap: 80px;
+      }
+      .hero {
+        h1 {
+          font-size: 60px;
+          left: 200px;
+          top: 200px;
+        }
+        #mockup {
+          width: 95%;
+          height: auto;
+          position: relative;
+        }
+      }
+    }
+    .about,
+    .gradient-background {
+      height: 3500px;
+    }
+    .about-text {
+      width: 60%;
+      padding: 80px;
+      margin-left: 100px;
+      height: auto;
+    }
+    .me {
+      width: 350px;
+      height: 450px;
+      top: 75px;
+    }
+    .origin {
+      width: 85%;
+      top: 150px;
+      height: auto;
+      .text {
+        h2 {
+          font-size: 28px;
+          padding-left: 20px;
+          padding-top: 15px;
+        }
+        p {
+          padding-left: 20px;
+          padding-top: 10px;
+          width: 75%;
+        }
+      }
+      .makeup {
+        .photo {
+          width: 350px;
+          height: 250px;
+          right: 50px;
+          top: 25px;
+        }
+      }
+    }
+    .WIC {
+      padding: 40px;
+
+      h2 {
+        font-size: 42px;
+        padding-left: 50px;
+        padding-top: 15px;
+      }
+      .bubbless {
+        gap: 60px;
+        flex-wrap: wrap;
+      }
+    }
+    .mission {
+      padding: 90px 30px;
+      font-size: 34px;
+      p {
+        padding: 0 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    height: auto;
+    .back2 {
+      .nav2 {
+        width: 80%;
+        gap: 80px;
+      }
+      .hero {
+        h1 {
+          font-size: 60px;
+          left: 200px;
+          top: 200px;
+        }
+        #mockup {
+          width: 95%;
+          height: auto;
+          position: relative;
+        }
+      }
+    }
+    .about,
+    .gradient-background {
+      height: 3500px;
+    }
+    .about-text {
+      width: 60%;
+      padding: 80px;
+      margin-left: 100px;
+      height: auto;
+    }
+    .me {
+      width: 350px;
+      height: 450px;
+      top: 75px;
+    }
+    .origin {
+      width: 85%;
+      top: 150px;
+      height: auto;
+      .text {
+        h2 {
+          font-size: 28px;
+          padding-left: 20px;
+          padding-top: 15px;
+        }
+        p {
+          padding-left: 20px;
+          padding-top: 10px;
+          width: 75%;
+        }
+      }
+      .makeup {
+        .photo {
+          width: 350px;
+          height: 250px;
+          right: 50px;
+          top: 25px;
+        }
+      }
+    }
+    .WIC {
+      padding: 40px;
+
+      h2 {
+        font-size: 42px;
+        padding-left: 50px;
+        padding-top: 15px;
+      }
+      .bubbless {
+        gap: 60px;
+        flex-wrap: wrap;
+      }
+    }
+    .mission {
+      padding: 90px 30px;
+      font-size: 34px;
+      p {
+        padding: 0 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    .back2 {
+      .nav2 {
+        width: 100%;
+        gap: 50px;
+      }
+      .hero {
+        h1 {
+          font-size: 50px;
+          left: 50px;
+          top: 150px;
+        }
+        #mockup {
+          width: 100%;
+          height: auto;
+          position: relative;
+        }
+      }
+    }
+    .about-text {
+      width: 70%;
+      padding: 50px;
+      margin-left: 50px;
+      height: auto;
+      margin-bottom: 100px;
+    }
+    .me {
+      width: 400px;
+      height: 400px;
+      top: 100px;
+      padding: 10px;
+    }
+    .origin {
+      flex-direction: column;
+      width: 90%;
+      height: auto;
+      top: 100px;
+      .text {
+        left: 0;
+        padding: 20px;
+        width: 100%;
+        h2 {
+          font-size: 24px;
+          padding-left: 10px;
+          padding-top: 10px;
+        }
+        p {
+          width: 100%;
+          padding-left: 10px;
+          padding-top: 5px;
+        }
+      }
+      .makeup {
+        justify-content: center;
+        .photo {
+          width: 300px;
+          height: 200px;
+          right: 0;
+          top: 0;
+        }
+      }
+    }
+    .WIC {
+      padding: 20px;
+      top: 150px;
+      h2 {
+        font-size: 36px;
+        padding-left: 20px;
+        padding-top: 10px;
+      }
+      .bubbless {
+        flex-direction: column;
+        a {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+        .bubbled {
+          width: 100%;
+          height: auto;
+          margin: 20px 0;
+          padding-right: 10px;
+          padding-top: 10px;
+        }
+      }
+    }
+    .mission p {
+      padding: 60px 20px;
+      font-size: 28px;
+    }
+    .end {
+      padding: 60px 20px;
+      h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+      }
+      .bubbles-wrap {
+        gap: 20px;
+      }
+      .fact-bubble {
+        width: 180px;
+        height: 180px;
+        font-size: 14px;
+        padding: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    .back2 {
+      .nav2 {
+        width: 100%;
+        gap: 20px;
+        flex-direction: column;
+        height: auto;
+      }
+      .hero {
+        flex-direction: column;
+        h1 {
+          font-size: 36px;
+          left: 140px;
+          top: 200px;
+          text-align: center;
+        }
+        #mockup {
+          width: 100%;
+          height: auto;
+          position: relative;
+        }
+      }
+    }
+    .about,
+    .YUH {
+      flex-direction: column;
+    }
+    .about-text {
+      margin-left: 0;
+      height: auto;
+      width: 100%;
+    }
+    .me {
+      width: 400px;
+      margin: 0 auto;
+      height: 400px;
+      position: relative;
+      border-radius: 15px;
+      bottom: 100px;
+    }
+    .origin {
+      width: 100%;
+      flex-direction: column;
+      height: auto;
+      top: 200px;
+      .text {
+        left: 0;
+        padding: 10px;
+        width: 100%;
+        h2 {
+          font-size: 20px;
+          padding-left: 5px;
+          padding-top: 5px;
+        }
+        p {
+          width: 100%;
+          padding-left: 5px;
+          padding-top: 5px;
+        }
+      }
+      .makeup {
+        justify-content: center;
+        .photo {
+          width: 100%;
+          height: 150px;
+          right: 0;
+          top: 0;
+        }
+      }
+    }
+    .WIC {
+      padding: 10px;
+      top: 250px;
+      h2 {
+        font-size: 28px;
+        padding-left: 10px;
+        padding-top: 5px;
+      }
+      .bubbless {
+        flex-direction: column;
+        a {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+        .bubbled {
+          width: 100%;
+          height: auto;
+          margin: 10px 0;
+          padding-right: 5px;
+          padding-top: 5px;
+        }
+      }
+    }
+    .mission p {
+      padding: 40px 10px;
+      font-size: 20px;
+    }
+    .end {
+      padding: 40px 10px;
+      h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+      .bubbles-wrap {
+        gap: 10px;
+      }
+      .fact-bubble {
+        width: 140px;
+        height: 140px;
+        font-size: 12px;
+        padding: 10px;
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .wrapper {
+    .back2 {
+      .nav2 {
+        width: 100%;
+        gap: 15px;
+        flex-direction: column;
+        height: auto;
+      }
+      .hero {
+        flex-direction: column;
+        h1 {
+          font-size: 28px;
+          left: 100px;
+          top: 180px;
+          text-align: center;
+        }
+        #mockup {
+          width: 100%;
+          height: auto;
+          position: relative;
+        }
+      }
+    }
+    .about,
+    .gradient-background {
+      height: 4000px;
+    }
+    .about,
+    .YUH {
+      flex-direction: column;
+    }
+    .about-text {
+      margin-left: 0;
+      height: auto;
+      width: 100%;
+    }
+    .me {
+      width: 300px;
+      margin: 0 auto;
+      height: 300px;
+      position: relative;
+      border-radius: 15px;
+      bottom: 80px;
+    }
+    .origin {
+      width: 100%;
+      flex-direction: column;
+      height: auto;
+      top: 150px;
+      .text {
+        left: 0;
+        padding: 10px;
+        width: 100%;
+        h2 {
+          font-size: 18px;
+          padding-left: 5px;
+          padding-top: 5px;
+        }
+        p {
+          width: 100%;
+          padding-left: 5px;
+          padding-top: 5px;
+        }
+      }
+      .makeup {
+        justify-content: center;
+        .photo {
+          width: 100%;
+          height: 120px;
+          right: 0;
+          top: 0;
+        }
+      }
+    }
+    .WIC {
+      padding: 8px;
+      top: 200px;
+      h2 {
+        font-size: 24px;
+        padding-left: 10px;
+        padding-top: 5px;
+      }
+      .bubbless {
+        flex-direction: column;
+        a {
+          margin-right: 0;
+          margin-bottom: 8px;
+        }
+        .bubbled {
+          width: 100%;
+          height: auto;
+          margin: 8px 0;
+          padding-right: 5px;
+          padding-top: 5px;
+        }
+      }
+    }
+    .mission {
+      padding: 30px 8px;
+      font-size: 18px;
+      position: relative;
+    }
+  }
 }

@@ -6,6 +6,7 @@
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 h1,
 h2,
@@ -24,6 +25,10 @@ p {
   font-family: popB;
   src: url(../fonts/Poppins-Bold.ttf);
 }
+@font-face {
+  font-family: hand;
+  src: url(../fonts/PatrickHand-Regular.ttf);
+}
 #intro-video {
   width: 100%;
   position: absolute;
@@ -39,8 +44,7 @@ p {
   margin: 0 auto;
   position: absolute;
   z-index: 2;
-  left:480px;
-  ;
+  left: 480px;
 }
 #name-video.fade-out {
   opacity: 0;
