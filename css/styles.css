@@ -1898,7 +1898,7 @@ p {
   padding: 40px;
   font-family: "Arial", sans-serif;
 }
-.makeup-recs .nav2 {
+.makeup-recs .nav4 {
   display: flex;
   margin: 0 auto;
   justify-content: center;
@@ -1915,13 +1915,13 @@ p {
   z-index: 111;
   margin-bottom: 50px;
 }
-.makeup-recs .nav2 a {
+.makeup-recs .nav4 a {
   text-decoration: none;
   color: #ff96c2;
   font-size: 20px;
   font-family: popM;
 }
-.makeup-recs .nav2 :hover {
+.makeup-recs .nav4 :hover {
   color: rgb(109, 81, 141);
 }
 .makeup-recs h1 {
@@ -2003,13 +2003,6 @@ p {
   }
 }
 @media (max-width: 1400px) {
-  .makeup-recs .nav2 {
-    width: 80%;
-    gap: 60px;
-  }
-  .makeup-recs .nav2 a {
-    font-size: 18px;
-  }
   .makeup-recs h1 {
     font-size: 36px;
   }
@@ -2034,14 +2027,6 @@ p {
   .makeup-recs {
     padding: 30px;
   }
-  .makeup-recs .nav2 {
-    width: 90%;
-    gap: 50px;
-    height: 60px;
-  }
-  .makeup-recs .nav2 a {
-    font-size: 18px;
-  }
   .makeup-recs h1 {
     font-size: 32px;
   }
@@ -2061,51 +2046,85 @@ p {
 }
 /* Mobile Styles */
 @media (max-width: 768px) {
-  .makeup-recs {
+  .makeup-recs,
+  .gradient-background {
     padding: 20px;
   }
-  .makeup-recs .nav2 {
+  .makeup-recs .nav4,
+  .gradient-background .nav4 {
+    width: 90%;
     flex-direction: column;
     gap: 15px;
+    padding: 20px 0;
+    background-color: white;
+    box-shadow: 10px 5px 20px 5px #ffc0e7;
+    border-radius: 40px;
     height: auto;
-    padding: 15px 0;
+    position: relative;
+    top: 0px;
+    align-items: center;
+    z-index: 111;
+    margin: 0 auto 50px auto;
+    display: flex;
+    justify-content: center;
   }
-  .makeup-recs h1 {
+  .makeup-recs .nav4 a,
+  .gradient-background .nav4 a {
+    text-decoration: none;
+    color: #ff96c2;
+    font-size: 16px;
+    font-family: popM;
+  }
+  .makeup-recs .nav4 a:hover,
+  .gradient-background .nav4 a:hover {
+    color: rgb(109, 81, 141);
+  }
+  .makeup-recs h1,
+  .gradient-background h1 {
     font-size: 26px;
   }
-  .makeup-recs .makeup-grid {
+  .makeup-recs .makeup-grid,
+  .gradient-background .makeup-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  .makeup-recs .makeup-card img {
+  .makeup-recs .makeup-card img,
+  .gradient-background .makeup-card img {
     height: 250px;
   }
-  .makeup-recs .makeup-card h3 {
+  .makeup-recs .makeup-card h3,
+  .gradient-background .makeup-card h3 {
     font-size: 15px;
   }
-  .makeup-recs .makeup-card p {
+  .makeup-recs .makeup-card p,
+  .gradient-background .makeup-card p {
     font-size: 12px;
   }
-  .makeup-recs .center-btn {
+  .makeup-recs .center-btn,
+  .gradient-background .center-btn {
     margin-top: 30px;
   }
-  .makeup-recs .center-btn button {
+  .makeup-recs .center-btn button,
+  .gradient-background .center-btn button {
     font-size: 14px;
     padding: 10px 20px;
   }
 }
-/* Extra Small Devices */
-@media (max-width: 480px) {
-  .makeup-recs .makeup-card img {
+@media (max-width: 500px) {
+  .makeup-recs .makeup-card img,
+  .gradient-background .makeup-card img {
     height: 200px;
   }
-  .makeup-recs .makeup-card h3 {
+  .makeup-recs .makeup-card h3,
+  .gradient-background .makeup-card h3 {
     font-size: 14px;
   }
-  .makeup-recs .makeup-card p {
+  .makeup-recs .makeup-card p,
+  .gradient-background .makeup-card p {
     font-size: 11px;
   }
-  .makeup-recs .center-btn button {
+  .makeup-recs .center-btn button,
+  .gradient-background .center-btn button {
     padding: 8px 16px;
     font-size: 13px;
   }

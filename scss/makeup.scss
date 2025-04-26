@@ -4,7 +4,7 @@
   padding: 40px;
   font-family: "Arial", sans-serif;
 
-  .nav2 {
+  .nav4 {
     display: flex;
     margin: 0 auto;
     justify-content: center;
@@ -121,15 +121,6 @@
 }
 @media (max-width: 1400px) {
   .makeup-recs {
-    .nav2 {
-      width: 80%;
-      gap: 60px;
-
-      a {
-        font-size: 18px;
-      }
-    }
-
     h1 {
       font-size: 36px;
     }
@@ -163,16 +154,6 @@
   .makeup-recs {
     padding: 30px;
 
-    .nav2 {
-      width: 90%;
-      gap: 50px;
-      height: 60px;
-
-      a {
-        font-size: 18px;
-      }
-    }
-
     h1 {
       font-size: 32px;
     }
@@ -200,14 +181,37 @@
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-  .makeup-recs {
+  .makeup-recs,
+  .gradient-background {
     padding: 20px;
 
-    .nav2 {
+    .nav4 {
+      width: 90%;
       flex-direction: column;
       gap: 15px;
+      padding: 20px 0;
+      background-color: white;
+      box-shadow: 10px 5px 20px 5px #ffc0e7;
+      border-radius: 40px;
       height: auto;
-      padding: 15px 0;
+      position: relative;
+      top: 0px;
+      align-items: center;
+      z-index: 111;
+      margin: 0 auto 50px auto;
+      display: flex;
+      justify-content: center;
+
+      a {
+        text-decoration: none;
+        color: #ff96c2;
+        font-size: 16px;
+        font-family: popM;
+
+        &:hover {
+          color: rgb(109, 81, 141);
+        }
+      }
     }
 
     h1 {
@@ -235,18 +239,17 @@
 
     .center-btn {
       margin-top: 30px;
-    }
 
-    .center-btn button {
-      font-size: 14px;
-      padding: 10px 20px;
+      button {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
     }
   }
 }
-
-/* Extra Small Devices */
-@media (max-width: 480px) {
-  .makeup-recs {
+@media (max-width: 500px) {
+  .makeup-recs,
+  .gradient-background {
     .makeup-card {
       img {
         height: 200px;
