@@ -5,8 +5,7 @@
 .bubble-page {
   position: relative;
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  height: 1400px;
 
   .nav2 {
     display: flex;
@@ -52,9 +51,6 @@
 }
 
 .bubble-container {
-  position: fixed;
-  inset: 0;
-  overflow: hidden;
   z-index: 0;
 }
 
