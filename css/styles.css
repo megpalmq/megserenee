@@ -308,6 +308,20 @@ p {
   font-family: popM;
   color: #ff96c2;
 }
+.wrapper .about-text button {
+  background-color: #ff96c2;
+  color: white;
+  font-family: popM;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.wrapper .about-text button:hover {
+  background-color: #e68ab5;
+}
 .wrapper .me {
   background-image: url(../images/about.PNG);
   background-repeat: no-repeat;
@@ -2316,8 +2330,16 @@ a:hover {
   color: rgb(242.2, 131.8, 157.4);
 }
 
+.blog-hero {
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+  background: linear-gradient(300deg, #ffc9f5, #ffecf4, #efdfff);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
 .blog-hero .nav2 {
   display: flex;
+  margin: 0 auto;
   justify-content: center;
   gap: 100px;
   background-color: white;
@@ -2338,7 +2360,7 @@ a:hover {
   font-size: 20px;
   font-family: popM;
 }
-.blog-hero .nav2:hover {
+.blog-hero .nav2 :hover {
   color: rgb(109, 81, 141);
 }
 .blog-hero h1 {
@@ -2352,6 +2374,17 @@ a:hover {
   margin: 0 auto;
 }
 
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .blog-posts {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
@@ -2424,26 +2457,26 @@ footer {
 }
 
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  overflow: auto;
-  padding-top: 100px;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  overflow: auto; /* Enable scroll if needed */
+  padding-top: 100px; /* Position the modal 100px from the top */
 }
 
 .modal-content {
   background-color: #fff;
-  margin: 0 auto;
+  margin: 0 auto; /* Center it horizontally */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
-  max-width: 800px;
-  border-radius: 8px;
+  width: 80%; /* Set the width of the modal */
+  max-width: 800px; /* Max width of modal */
+  border-radius: 8px; /* Rounded corners */
   animation: modalFadeIn 0.3s ease-out;
 }
 
@@ -2484,6 +2517,7 @@ footer {
   line-height: 1.6;
 }
 
+/* Optional Styling for the Rest of the Page */
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -2519,55 +2553,55 @@ body {
   background-color: #fabce0;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .blog-hero .nav2 {
-    gap: 50px;
-  }
-  .blog-hero h1 {
-    font-size: 2rem;
-  }
-  .blog-posts {
-    padding: 2rem 1rem;
-  }
-  .modal {
-    padding-top: 200px;
-  }
-}
-@media (max-width: 1024px) {
-  .blog-hero .nav2 {
-    width: 90%;
-    gap: 20px;
-  }
-  .blog-hero h1 {
-    font-size: 1.8rem;
-  }
-  .blog-posts {
-    grid-template-columns: 1fr;
+    gap: 30px;
   }
 }
 @media (max-width: 768px) {
   .blog-hero .nav2 {
     flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    padding: 15px;
+    gap: 5px;
+    height: 300px;
+  }
+  .nav2 {
+    width: 90%;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0;
+  }
+  .nav2 a {
     height: auto;
-  }
-  .blog-hero h1 {
-    font-size: 2rem;
-    align-items: center;
-    text-align: center;
-  }
-  p {
-    font-size: 1rem;
-    text-align: center;
-  }
-  .blog-posts {
-    padding: 2rem 1rem;
+    font-size: 18px;
   }
 }
-@media (max-width: 500px) {
-  .blog-hero h1 {
+@media (max-width: 480px) {
+  .blog-hero .nav2 {
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem;
+  }
+  .blog-posts {
+    padding: 1rem 1rem;
+    width: 50%;
+  }
+  .blog-posts .post-preview {
+    margin: 0 auto;
+    width: 90%;
+    margin-right: 150px;
+  }
+  .post-preview h2 {
     font-size: 1.2rem;
+  }
+  .post-preview p {
+    font-size: 0.9rem;
+  }
+  .cta {
+    padding: 3rem 1rem;
+  }
+  .read-more,
+  .learn-more {
+    font-size: 0.9rem;
+    padding: 8px 16px;
   }
 }

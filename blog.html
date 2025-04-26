@@ -17,6 +17,7 @@
         <a href="index.html">home</a>
         <a href="about.html">about</a>
         <a href="content.html">content</a>
+        <a style="color: purple" href="blog.html">blog</a>
         <a href="hair.html">hair recs</a>
         <a href="makeup.html">makeup recs</a>
         <a href="fun.html">fun facts</a>
@@ -116,7 +117,7 @@
         Get the latest skincare tips, product launches, and K-beauty inspo
         straight to your inbox.
       </p>
-      <a href="subscribe.html" class="subscribe-button">Join the Glow List</a>
+      <a class="subscribe-button" id="subscribe-btn">Join the Glow List</a>
     </section>
 
     <!-- Footer -->
@@ -217,6 +218,12 @@
         if (event.target == document.getElementById("modal")) {
           closeModal();
         }
+        document
+          .getElementById("subscribe-btn")
+          .addEventListener("click", function (event) {
+            event.preventDefault(); // Prevents the default link behavior (e.g., navigating to subscribe.html)
+            alert("Thank you for subscribing!");
+          });
       };
     </script>
   </body>

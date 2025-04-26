@@ -108,6 +108,21 @@
       font-family: popM;
       color: #ff96c2;
     }
+    button {
+      background-color: #ff96c2;
+      color: white;
+      font-family: popM;
+      font-size: 20px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #e68ab5;
+      }
+    }
   }
   .me {
     background-image: url(../images/about.PNG);
