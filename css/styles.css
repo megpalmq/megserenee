@@ -2582,13 +2582,13 @@ body {
     padding: 1rem;
   }
   .blog-posts {
-    padding: 1rem 1rem;
-    width: 100%;
-    margin: 0 auto;
+    display: block;
+    padding: 10px;
   }
   .blog-posts .post-preview {
     margin: 0 auto;
     width: 90%;
+    margin-bottom: 50px;
   }
   .post-preview h2 {
     font-size: 1.2rem;
