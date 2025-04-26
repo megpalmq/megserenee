@@ -18,6 +18,8 @@
     <div class="back2">
       <video autoplay muted playsinline id="intro-video">
         <source src="/vids/Search.webm" type="video/webm" />
+        <source src="/vids/Search.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
       </video>
       <div class="welcome">
         <p>
@@ -102,7 +104,6 @@
       const introVideo = document.getElementById("intro-video");
       const welcome = document.querySelector(".welcome");
       const mobileNav = document.querySelector(".mobile");
-      const nameVideo = document.getElementById("name-video");
       const file = document.querySelector(".file");
     
       introVideo.addEventListener("ended", () => {
@@ -122,21 +123,8 @@
       introVideo.addEventListener("ended", () => {
         introVideo.classList.add("fade-out");
     
-        setTimeout(() => {
-          introVideo.remove();
-          nameVideo.style.display = "block";
-          nameVideo.play();
-        }, 500);
       });
     
-      nameVideo.addEventListener("ended", () => {
-        nameVideo.classList.add("fade-out");
-    
-        setTimeout(() => {
-          nameVideo.remove();
-          file.classList.add("show");
-        }, 500);
-      });
     </script>
   </body>
 </html>
