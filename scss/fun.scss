@@ -37,7 +37,7 @@
 
 .bubble-page h1 {
   position: absolute;
-  top: 400px;
+  top: 450px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 2rem;
@@ -184,10 +184,10 @@
 }
 
 /* Extra small (≤ 480px) */
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .bubble-page h1 {
     font-size: 1.1rem;
-    top: 250px;
+    top: 500px;
   }
 
   .bubble {
