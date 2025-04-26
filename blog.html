@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog | MegSerenee</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="blog-hero">
+      <div class="nav2">
+        <a href="index.html">home</a>
+        <a href="about.html">about</a>
+        <a href="content.html">content</a>
+        <a href="hair.html">hair recs</a>
+        <a href="makeup.html">makeup recs</a>
+        <a href="fun.html">fun facts</a>
+      </div>
+      <h1>Megserene Blog 💻</h1>
+      <p>
+        Fresh skincare tips, product breakdowns, K-beauty secrets, and
+        everything you need for your glow-up journey.
+      </p>
+    </section>
+
+    <section class="blog-posts">
+      <article class="post-preview">
+        <img src="/images/glass.webp" alt="Glass Skin Guide" />
+        <h2>How to Achieve Glass Skin: Step-by-Step Routine</h2>
+        <p>
+          Want that dewy, radiant glass skin look? Here's your complete
+          beginner-friendly guide based on real K-beauty techniques!
+        </p>
+        <button class="read-more" onclick="openModal('glass-skin-guide')">
+          Read More →
+        </button>
+      </article>
+
+      <article class="post-preview">
+        <img src="/images/snail.webp" alt="Ingredient Spotlight" />
+        <h2>Ingredient Spotlight: Why Snail Mucin is Your Skin's BFF</h2>
+        <p>
+          Don't be scared—snail mucin is a miracle in a bottle! Let’s dive into
+          why it's so loved and how to use it the right way.
+        </p>
+        <button class="read-more" onclick="openModal('snail-mucin')">
+          Read More →
+        </button>
+      </article>
+
+      <article class="post-preview">
+        <img src="images/kbea.webp" alt="K-Beauty Routine" />
+        <h2>Building Your First K-Beauty Routine (Without Overwhelm)</h2>
+        <p>
+          New to K-beauty? I'll help you build a personalized skincare routine
+          that's simple, effective, and fun!
+        </p>
+        <button class="read-more" onclick="openModal('kbeauty-routine')">
+          Read More →
+        </button>
+      </article>
+
+      <article class="post-preview">
+        <img src="images/sheet.jpg" alt="Best K-Beauty Sheet Masks" />
+        <h2>Best K-Beauty Sheet Masks for Glowing Skin</h2>
+        <p>
+          Want a quick fix for glowing skin? K-beauty sheet masks are the
+          answer! Find out which ones deliver the best results for your skin
+          type.
+        </p>
+        <button class="read-more" onclick="openModal('sheet-mask-guide')">
+          Read More →
+        </button>
+      </article>
+
+      <article class="post-preview">
+        <img src="/images/clea.webp" alt="Double Cleansing" />
+        <h2>Double Cleansing: The Secret to Clear Skin</h2>
+        <p>
+          Double cleansing is a cornerstone of any K-beauty routine. Here's why
+          it's so effective in achieving clear, fresh skin!
+        </p>
+        <button class="read-more" onclick="openModal('double-cleansing')">
+          Read More →
+        </button>
+      </article>
+
+      <article class="post-preview">
+        <img src="/images/vita.jpg" alt="Vitamin C Serum" />
+        <h2>The Power of Vitamin C in Skincare</h2>
+        <p>
+          Vitamin C is a game-changer when it comes to brightening and
+          anti-aging. Learn why it's a must-have in your skincare routine.
+        </p>
+        <button class="read-more" onclick="openModal('vitamin-c-benefits')">
+          Read More →
+        </button>
+      </article>
+    </section>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">×</span>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+
+    <section class="cta">
+      <h2>Stay in the Glow ✨</h2>
+      <p>
+        Get the latest skincare tips, product launches, and K-beauty inspo
+        straight to your inbox.
+      </p>
+      <a href="subscribe.html" class="subscribe-button">Join the Glow List</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 MegSerenee. Made with love for skincare lovers.</p>
+    </footer>
+
+    <!-- Modal Content Script -->
+    <script>
+      function openModal(postId) {
+        const modal = document.getElementById("modal");
+        const modalBody = document.getElementById("modal-body");
+
+        const content = {
+          "glass-skin-guide": {
+            title: "How to Achieve Glass Skin: Step-by-Step Routine",
+            text: `
+              <p>Want that dewy, radiant glass skin look? Here's your complete beginner-friendly guide based on real K-beauty techniques!</p>
+              <p>1. Cleanse with a hydrating cleanser...<br> 2. Layer a soothing toner...<br> 3. Apply a brightening serum...<br> 4. Moisturize with a lightweight cream...</p>
+              <p><strong>Pro Tip:</strong> Use a facial mist throughout the day to maintain that fresh glow.</p>
+            <a href="https://www.glamour.com/story/how-to-get-glass-skin" target="_blank"><button class="learn-more">Learn More</button></a>
+              `,
+          },
+          "snail-mucin": {
+            title: "Ingredient Spotlight: Why Snail Mucin is Your Skin's BFF",
+            text: `
+              <p>Don't be scared—snail mucin is a miracle in a bottle! Let's dive into why it's so loved and how to use it the right way.</p>
+              <p>Snail mucin is packed with nutrients like hyaluronic acid, glycolic acid, and zinc, which help repair skin damage, enhance moisture, and prevent aging.</p>
+              <p><strong>How to Use:</strong> Apply a thin layer after cleansing and before your moisturizer. Use it consistently for best results.</p>
+             <a href="https://mcpress.mayoclinic.org/living-well/snail-mucin-for-skincare/" target="_blank"><button class="learn-more">Learn More</button></a>
+              `,
+          },
+          "kbeauty-routine": {
+            title: "Building Your First K-Beauty Routine (Without Overwhelm)",
+            text: `
+              <p>New to K-beauty? I'll help you build a personalized skincare routine that's simple, effective, and fun!</p>
+              <p>The K-beauty routine typically consists of 10 steps: cleansing, exfoliating, toning, essence, serum, eye cream, moisturizer, SPF, etc. But you can start small and slowly build your routine as you get used to it.</p>
+                <p><strong>Beginner's Routine:</strong> Start with a gentle cleanser, hydrating toner, and a good moisturizer. Add in serums and treatments as you go.</p>
+                <p>Remember, consistency is key! Stick to your routine and give products time to work.</p>
+            <a href="https://www.youtube.com/watch?v=rnPuXYUoDOA" target="_blank"><button class="learn-more">Learn More</button></a>
+              `,
+          },
+          "sheet-mask-guide": {
+            title: "Best K-Beauty Sheet Masks for Glowing Skin",
+            text: `
+    <p>Sheet masks are a fun and relaxing way to get that instant glow. Here are some of the best K-beauty sheet masks for achieving radiant skin:</p>
+    <ul>
+      <li><strong>Neogen Real Fresh Green Tea Mask</strong> – Packed with green tea extract, this mask soothes and hydrates the skin.</li>
+      <li><strong>Dr. Jart+ Dermask Water Jet Soothing Hydration Mask</strong> – Perfect for dry and sensitive skin, offering a hydrating boost.</li>
+      <li><strong>Innisfree My Real Squeeze Mask</strong> – A variety of options targeting different skin concerns like brightening, moisturizing, and anti-aging.</li>
+    </ul>
+    <p>Tip: Make sure to use your sheet mask for at least 15-20 minutes for optimal absorption of nutrients!</p>
+    <a href="https://www.glamour.com/story/best-korean-face-masks" target="_blank"><button class="learn-more">Learn More</button></a>
+  `,
+          },
+          "double-cleansing": {
+            title: "Double Cleansing: The Secret to Clear Skin",
+            text: `
+    <p>Double cleansing involves using two different types of cleansers to thoroughly clean your skin. Here's how to do it:</p>
+    <ul>
+      <li><strong>Step 1:</strong> Start with an oil-based cleanser to remove makeup and sunscreen.</li>
+      <li><strong>Step 2:</strong> Follow up with a water-based cleanser to remove any remaining impurities and cleanse the skin deeply.</li>
+    </ul>
+    <p>By using both types of cleansers, you ensure your skin is thoroughly cleaned without being stripped of moisture!</p>
+    <a href="https://www.dermovia.com/blogs/news/ultimate-guide-to-the-korean-double-cleansing-method?srsltid=AfmBOopV2SZ9tu1A_2ZGMgT8pscgHUiQt_sj8S3EUbIbbqnHbRDRsnyA" target="_blank"><button class="learn-more">Learn More</button></a>
+  `,
+          },
+          "vitamin-c-benefits": {
+            title: "The Power of Vitamin C in Skincare",
+            text: `
+    <p>Vitamin C is known for its brightening properties and its ability to fight free radicals, which cause premature aging. Here's why you should include it in your routine:</p>
+    <ul>
+      <li><strong>Brightening:</strong> Vitamin C helps even out your skin tone and reduce dark spots.</li>
+      <li><strong>Anti-aging:</strong> It helps boost collagen production, reducing the appearance of fine lines and wrinkles.</li>
+      <li><strong>Protection:</strong> Vitamin C protects your skin from environmental stressors like pollution and UV damage.</li>
+    </ul>
+    <p>Make sure to apply Vitamin C serum in the morning and follow up with sunscreen for maximum protection!</p>
+ <a href="https://knspo.com/blogs/the-world-of-k-beauty/what-are-the-benefits-of-vitamin-c-in-skincare-and-how-to-get-started?srsltid=AfmBOoovye5t8r7MIZcNCxKGtH7M9VANQ6FmCAuqgwM2fYw2tKYLtSYn" target="_blank"><button class="learn-more">Learn More</button></a>
+    `,
+          },
+        };
+
+        const postContent = content[postId];
+        modalBody.innerHTML = `
+          <h2>${postContent.title}</h2>
+          ${postContent.text}
+        `;
+
+        modal.style.display = "block";
+      }
+
+      function closeModal() {
+        document.getElementById("modal").style.display = "none";
+      }
+
+      // Close modal if user clicks outside of it
+      window.onclick = function (event) {
+        if (event.target == document.getElementById("modal")) {
+          closeModal();
+        }
+      };
+    </script>
+  </body>
+</html>
