@@ -17,7 +17,7 @@
   <body>
     <div class="back2">
       <video autoplay muted playsinline id="intro-video">
-        <source src="/vids/Search.webm" type="video/mp4" />
+        <source src="/vids/Search.webm" type="video/webm" />
       </video>
       <div class="welcome">
         <p>
@@ -87,33 +87,51 @@
           ></a>
         </div>
       </div>
+      <div class="mobile">
+        <div class="nav1">
+          <a href="index.html">home</a>
+          <a href="about.html">about</a>
+          <a  href="content.html">content</a>
+          <a href="hair.html">hair recs</a>
+          <a href="makeup.html">makeup recs</a>
+          <a href="fun.html">fun facts</a>
+        </div>
+      </div>
     </div>
     <script>
       const introVideo = document.getElementById("intro-video");
       const welcome = document.querySelector(".welcome");
-
+      const mobileNav = document.querySelector(".mobile");
+      const nameVideo = document.getElementById("name-video");
+      const file = document.querySelector(".file");
+    
       introVideo.addEventListener("ended", () => {
         introVideo.classList.add("fade-out");
-
+    
         setTimeout(() => {
           introVideo.remove();
           welcome.classList.add("show");
-        }, 500); // wait for fade-out to finish
+    
+          // Check if it's a mobile device before showing the mobile navigation
+          if (window.innerWidth <= 768) {
+            mobileNav.classList.add("show");  // Use class to show mobile nav
+          }
+        }, 500);
       });
-
+    
       introVideo.addEventListener("ended", () => {
         introVideo.classList.add("fade-out");
-
+    
         setTimeout(() => {
           introVideo.remove();
           nameVideo.style.display = "block";
           nameVideo.play();
         }, 500);
       });
-
+    
       nameVideo.addEventListener("ended", () => {
         nameVideo.classList.add("fade-out");
-
+    
         setTimeout(() => {
           nameVideo.remove();
           file.classList.add("show");

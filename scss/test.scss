@@ -146,6 +146,9 @@
     top: -100px;
     left: 1420px;
   }
+  .mobile {
+    display: none;
+  }
 
   /* MEDIA QUERIES */
 
@@ -161,10 +164,16 @@
     }
     .tape {
       right: 550px;
+      display: none;
     }
   }
 
   @media (max-width: 1400px) {
+    .welcome {
+      font-size: 20px;
+      gap: 120px;
+      margin-top: 50px;
+    }
     .hover-area2 {
       left: 200px;
     }
@@ -180,10 +189,16 @@
     }
     .tape {
       right: 450px;
+      display: none;
     }
   }
 
-  @media (max-width: 1280px) {
+  @media (max-width: 1300px) {
+    .welcome {
+      font-size: 20px;
+      gap: 100px;
+      margin-top: 50px;
+    }
     .hover-areaSpotify {
       width: 250px;
       height: 100px;
@@ -210,6 +225,7 @@
     }
     .tape {
       right: 350px;
+      display: none;
     }
   }
 
@@ -297,110 +313,63 @@
       height: 150px;
     }
   }
-
   @media (max-width: 600px) {
-    .welcome {
-      position: fixed;
-      gap: 120px;
+    .mobile {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.8s ease;
     }
+
+    /* Show the mobile nav with the fade-in effect */
+    .mobile.show {
+      display: block;
+      opacity: 1;
+    }
+
+    .nav1 {
+      margin: 0 auto;
+      justify-content: center;
+      gap: 20px;
+      background-color: white;
+      width: 70%;
+      box-shadow: 10px 5px 20px 5px #ffc0e7;
+      border-radius: 40px;
+      height: auto;
+      position: relative;
+      top: 0px;
+      align-items: center;
+      box-shadow: black;
+      margin-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      padding: 10px 0;
+
+      a {
+        display: block;
+        text-align: center;
+        margin: 5px 0;
+        font-family: hand;
+        text-decoration: none;
+        font-size: 30px;
+
+        &:hover {
+          color: rgb(109, 81, 141);
+        }
+        &.show {
+          opacity: 1;
+          transform: translateY(0) rotate(-5deg);
+          pointer-events: auto;
+        }
+      }
+    }
+
     .hover-areaSpotify,
     .hover-area1,
     .hover-area2,
     .hover-area3,
     .hover-area4,
     .hover-area5 {
-      width: 200px;
-      height: 200px;
-      font-size: 18px;
-      display: flex;
-    }
-    .hover-areaSpotify {
-      left: 100px;
-      top: 380px;
-      width: 300px;
-      height: 70px;
-      font-size: 20px;
-    }
-    .hover-area1 {
-      left: 20px;
-      top: 500px;
-    }
-    .hover-area2 {
-      left: 20px;
-      top: 720px;
-    }
-    .hover-area3 {
-      left: 300px;
-      top: 740px;
-    }
-    .hover-area4 {
-      left: 300px;
-      top: 460px;
-    }
-    .hover-area5 {
-      left: 400px;
-      top: 300px;
-    }
-    .tape {
-      right: 100px;
-      top: -50px;
-      width: 120px;
-      height: 120px;
-    }
-  }
-  @media (max-width: 460px) {
-    .welcome {
-      position: fixed;
-      gap: 60px;
-      left: -30px;
-    }
-    .me {
-      width: 150px;
-      height: 200px;
-    }
-    .hover-areaSpotify,
-    .hover-area1,
-    .hover-area2,
-    .hover-area3,
-    .hover-area4,
-    .hover-area5 {
-      width: 200px;
-      height: 200px;
-      font-size: 18px;
-      display: flex;
-    }
-    .hover-areaSpotify {
-      left: 100px;
-      top: 380px;
-      width: 300px;
-      height: 50px;
-      font-size: 20px;
-    }
-    .hover-area1 {
-      left: 100px;
-      top: 500px;
-    }
-    .hover-area2 {
-      left: 100px;
-      top: 650px;
-    }
-    .hover-area3 {
-      left: 100px;
-      top: 800px;
-    }
-    .hover-area4 {
-      left: 100px;
-      top: 950px;
-    }
-    .hover-area5 {
-      left: 100px;
-      top: 1100px;
-    }
-    .tape {
-      right: 20px;
-      top: -50px;
-      width: 120px;
-      height: 120px;
+      display: none;
     }
   }
 }

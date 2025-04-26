@@ -1112,6 +1112,9 @@ p {
   top: -100px;
   left: 1420px;
 }
+.back2 .mobile {
+  display: none;
+}
 @media (max-width: 1650px) {
   .back2 .hover-area3 {
     left: 800px;
@@ -1124,9 +1127,15 @@ p {
   }
   .back2 .tape {
     right: 550px;
+    display: none;
   }
 }
 @media (max-width: 1400px) {
+  .back2 .welcome {
+    font-size: 20px;
+    gap: 120px;
+    margin-top: 50px;
+  }
   .back2 .hover-area2 {
     left: 200px;
   }
@@ -1142,9 +1151,15 @@ p {
   }
   .back2 .tape {
     right: 450px;
+    display: none;
   }
 }
-@media (max-width: 1280px) {
+@media (max-width: 1300px) {
+  .back2 .welcome {
+    font-size: 20px;
+    gap: 100px;
+    margin-top: 50px;
+  }
   .back2 .hover-areaSpotify {
     width: 250px;
     height: 100px;
@@ -1171,6 +1186,7 @@ p {
   }
   .back2 .tape {
     right: 350px;
+    display: none;
   }
 }
 @media (max-width: 1000px) {
@@ -1257,9 +1273,51 @@ p {
   }
 }
 @media (max-width: 600px) {
-  .back2 .welcome {
-    position: fixed;
-    gap: 120px;
+  .back2 {
+    /* Show the mobile nav with the fade-in effect */
+  }
+  .back2 .mobile {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+  }
+  .back2 .mobile.show {
+    display: block;
+    opacity: 1;
+  }
+  .back2 .nav1 {
+    margin: 0 auto;
+    justify-content: center;
+    gap: 20px;
+    background-color: white;
+    width: 70%;
+    box-shadow: 10px 5px 20px 5px #ffc0e7;
+    border-radius: 40px;
+    height: auto;
+    position: relative;
+    top: 0px;
+    align-items: center;
+    box-shadow: black;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  .back2 .nav1 a {
+    display: block;
+    text-align: center;
+    margin: 5px 0;
+    font-family: hand;
+    text-decoration: none;
+    font-size: 30px;
+  }
+  .back2 .nav1 a:hover {
+    color: rgb(109, 81, 141);
+  }
+  .back2 .nav1 a.show {
+    opacity: 1;
+    transform: translateY(0) rotate(-5deg);
+    pointer-events: auto;
   }
   .back2 .hover-areaSpotify,
   .back2 .hover-area1,
@@ -1267,98 +1325,7 @@ p {
   .back2 .hover-area3,
   .back2 .hover-area4,
   .back2 .hover-area5 {
-    width: 200px;
-    height: 200px;
-    font-size: 18px;
-    display: flex;
-  }
-  .back2 .hover-areaSpotify {
-    left: 100px;
-    top: 380px;
-    width: 300px;
-    height: 70px;
-    font-size: 20px;
-  }
-  .back2 .hover-area1 {
-    left: 20px;
-    top: 500px;
-  }
-  .back2 .hover-area2 {
-    left: 20px;
-    top: 720px;
-  }
-  .back2 .hover-area3 {
-    left: 300px;
-    top: 740px;
-  }
-  .back2 .hover-area4 {
-    left: 300px;
-    top: 460px;
-  }
-  .back2 .hover-area5 {
-    left: 400px;
-    top: 300px;
-  }
-  .back2 .tape {
-    right: 100px;
-    top: -50px;
-    width: 120px;
-    height: 120px;
-  }
-}
-@media (max-width: 460px) {
-  .back2 .welcome {
-    position: fixed;
-    gap: 60px;
-    left: -30px;
-  }
-  .back2 .me {
-    width: 150px;
-    height: 200px;
-  }
-  .back2 .hover-areaSpotify,
-  .back2 .hover-area1,
-  .back2 .hover-area2,
-  .back2 .hover-area3,
-  .back2 .hover-area4,
-  .back2 .hover-area5 {
-    width: 200px;
-    height: 200px;
-    font-size: 18px;
-    display: flex;
-  }
-  .back2 .hover-areaSpotify {
-    left: 100px;
-    top: 380px;
-    width: 300px;
-    height: 50px;
-    font-size: 20px;
-  }
-  .back2 .hover-area1 {
-    left: 100px;
-    top: 500px;
-  }
-  .back2 .hover-area2 {
-    left: 100px;
-    top: 650px;
-  }
-  .back2 .hover-area3 {
-    left: 100px;
-    top: 800px;
-  }
-  .back2 .hover-area4 {
-    left: 100px;
-    top: 950px;
-  }
-  .back2 .hover-area5 {
-    left: 100px;
-    top: 1100px;
-  }
-  .back2 .tape {
-    right: 20px;
-    top: -50px;
-    width: 120px;
-    height: 120px;
+    display: none;
   }
 }
 
