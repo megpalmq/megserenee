@@ -284,8 +284,9 @@
     }
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .makeup-page.gradient-background {
+    height: auto;
     .nav2 {
       width: 100%;
       height: auto;
@@ -299,10 +300,10 @@
     }
 
     .follow-me .social-icons {
-      width: 90%;
+      width: 100%;
       gap: 25px;
       padding: 10px;
-      height: auto;
+      height: 100px;
     }
 
     .content-grid {
@@ -322,10 +323,10 @@
       }
 
       img {
-        width: fit-content;
         justify-content: center;
         align-items: center;
         margin: 0 auto;
+        width: fit-content;
       }
       video {
         max-height: 200px;
