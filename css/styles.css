@@ -862,7 +862,7 @@ p {
     padding: 10px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .wrapper .back2 .nav2 {
     width: 100%;
     gap: 15px;
@@ -1565,7 +1565,7 @@ p {
     padding: 10px 20px;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 450px) {
   .makeup-page.gradient-background .nav2 {
     width: 100%;
     height: auto;
@@ -1595,7 +1595,12 @@ p {
   .makeup-page.gradient-background .content-card p {
     font-size: 0.8rem;
   }
-  .makeup-page.gradient-background .content-card img,
+  .makeup-page.gradient-background .content-card img {
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
   .makeup-page.gradient-background .content-card video {
     max-height: 200px;
   }

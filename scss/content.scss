@@ -284,7 +284,7 @@
     }
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 450px) {
   .makeup-page.gradient-background {
     .nav2 {
       width: 100%;
@@ -321,7 +321,12 @@
         font-size: 0.8rem;
       }
 
-      img,
+      img {
+        width: fit-content;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+      }
       video {
         max-height: 200px;
       }
