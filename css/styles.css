@@ -1602,7 +1602,7 @@ p {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    width: fit-content;
+    width: 270px;
   }
   .makeup-page.gradient-background .content-card video {
     max-height: 200px;
