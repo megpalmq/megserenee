@@ -21,7 +21,7 @@
       justify-content: center;
       gap: 100px;
       background-color: white;
-      width: 70%;
+      width: 80%;
       box-shadow: 10px 5px 20px 5px #ffc0e7;
       border-radius: 40px;
       height: 70px;
@@ -49,8 +49,8 @@
         text-align: center;
         position: relative;
         opacity: 0;
-        left: 1100px;
-        top: 300px;
+        left: 900px;
+        top: 200px;
         transform: scale(0.8);
         animation: titlePopIn 1s ease-out forwards;
         animation-delay: 3s;
@@ -69,7 +69,7 @@
     background: linear-gradient(300deg, #f2d8b6, #ffffff, #e6a2be);
     background-size: 180% 180%;
     animation: gradient-animation 18s ease infinite;
-    height: 2000px;
+    height: 1800px;
     gap: 150px;
   }
 
@@ -145,6 +145,7 @@
     border-radius: 20px;
     margin: 0 auto;
     display: flex;
+    height: auto;
     box-shadow: 10px 10px 25px 20px #ff96c2;
 
     .text {
@@ -200,53 +201,46 @@
   .WIC {
     position: relative;
     top: 300px;
-    padding: 50px;
-
+    left: 30px;
     h2 {
       font-family: popB;
       color: #ff96c2;
       font-size: 50px;
-      padding-left: 100px;
-      padding-top: 20px;
       flex: none;
     }
 
     .bubbless {
       display: flex;
+      width: 100%;
+      margin: 0 auto;
+      display: flexbox;
+      align-items: center;
+      justify-content: center;
       a {
         text-decoration: none;
         width: 100%;
-        margin-right: 100px;
       }
       .bubbled {
         flex-direction: column;
-        width: 100%;
+        width: 300px;
         height: 350px;
         background-color: white;
-        margin: 50px;
         text-align: center;
         border-radius: 20px;
         justify-content: center;
-        padding-right: 20px;
-        padding-top: 20px;
         transition: transform 0.3s ease, box-shadow 0.3s ease,
           background-color 0.3s ease;
 
         h3 {
+          padding-top: 20px;
           font-family: popM;
           color: #ff96c2;
-          padding-left: 30px;
-          padding-top: 10px;
         }
         .icon {
           font-size: 120px;
         }
-
         p {
-          font-family: popM;
-          color: #ff96c2;
-          padding-left: 30px;
-          padding-top: 10px;
+          padding: 10px;
         }
 
         &:hover {
@@ -270,55 +264,15 @@
     p {
       font-family: popM;
       color: #ffffff;
-      padding: 120px;
+      align-items: center;
+      justify-content: center;
       margin: 0 auto;
+      position: relative;
+      top: 100px;
       font-size: 40px;
       justify-content: center;
       align-self: center;
       display: flex;
-    }
-  }
-  .end {
-    background: linear-gradient(to bottom, #fff 0%, #f6edff 100%);
-    padding: 100px 50px;
-    text-align: center;
-    h2 {
-      font-family: popB;
-      font-size: 48px;
-      color: #ff96c2;
-      margin-bottom: 60px;
-    }
-
-    .bubbles-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-
-      .fact-bubble {
-        background-color: #fff;
-        border: 2px dashed #ff96c2;
-        border-radius: 50%;
-        width: 220px;
-        height: 220px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: popM;
-        font-size: 16px;
-        color: rgb(199, 125, 166);
-        padding: 30px;
-        text-align: center;
-        transition: transform 0.4s ease, box-shadow 0.3s ease;
-        position: relative;
-        cursor: default;
-
-        &:hover {
-          transform: scale(1.1) rotate(2deg);
-          box-shadow: 0px 10px 20px rgba(162, 132, 191, 0.3);
-          background-color: #f3eaff;
-        }
-      }
     }
   }
 }

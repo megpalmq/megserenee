@@ -222,7 +222,7 @@ p {
   justify-content: center;
   gap: 100px;
   background-color: white;
-  width: 70%;
+  width: 80%;
   box-shadow: 10px 5px 20px 5px #ffc0e7;
   border-radius: 40px;
   height: 70px;
@@ -251,8 +251,8 @@ p {
   text-align: center;
   position: relative;
   opacity: 0;
-  left: 1100px;
-  top: 300px;
+  left: 900px;
+  top: 200px;
   transform: scale(0.8);
   animation: titlePopIn 1s ease-out forwards;
   animation-delay: 3s;
@@ -269,7 +269,7 @@ p {
   background: linear-gradient(300deg, #f2d8b6, #ffffff, #e6a2be);
   background-size: 180% 180%;
   animation: gradient-animation 18s ease infinite;
-  height: 2000px;
+  height: 1800px;
   gap: 150px;
 }
 @keyframes gradient-animation {
@@ -343,6 +343,7 @@ p {
   border-radius: 20px;
   margin: 0 auto;
   display: flex;
+  height: auto;
   box-shadow: 10px 10px 25px 20px #ff96c2;
 }
 .wrapper .origin .text {
@@ -393,51 +394,46 @@ p {
 .wrapper .WIC {
   position: relative;
   top: 300px;
-  padding: 50px;
+  left: 30px;
 }
 .wrapper .WIC h2 {
   font-family: popB;
   color: #ff96c2;
   font-size: 50px;
-  padding-left: 100px;
-  padding-top: 20px;
   flex: none;
 }
 .wrapper .WIC .bubbless {
   display: flex;
+  width: 100%;
+  margin: 0 auto;
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
 }
 .wrapper .WIC .bubbless a {
   text-decoration: none;
   width: 100%;
-  margin-right: 100px;
 }
 .wrapper .WIC .bubbless .bubbled {
   flex-direction: column;
-  width: 100%;
+  width: 300px;
   height: 350px;
   background-color: white;
-  margin: 50px;
   text-align: center;
   border-radius: 20px;
   justify-content: center;
-  padding-right: 20px;
-  padding-top: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 .wrapper .WIC .bubbless .bubbled h3 {
+  padding-top: 20px;
   font-family: popM;
   color: #ff96c2;
-  padding-left: 30px;
-  padding-top: 10px;
 }
 .wrapper .WIC .bubbless .bubbled .icon {
   font-size: 120px;
 }
 .wrapper .WIC .bubbless .bubbled p {
-  font-family: popM;
-  color: #ff96c2;
-  padding-left: 30px;
-  padding-top: 10px;
+  padding: 10px;
 }
 .wrapper .WIC .bubbless .bubbled:hover {
   transform: scale(1.05);
@@ -455,52 +451,15 @@ p {
 .wrapper .mission p {
   font-family: popM;
   color: #ffffff;
-  padding: 120px;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
+  position: relative;
+  top: 100px;
   font-size: 40px;
   justify-content: center;
   align-self: center;
   display: flex;
-}
-.wrapper .end {
-  background: linear-gradient(to bottom, #fff 0%, #f6edff 100%);
-  padding: 100px 50px;
-  text-align: center;
-}
-.wrapper .end h2 {
-  font-family: popB;
-  font-size: 48px;
-  color: #ff96c2;
-  margin-bottom: 60px;
-}
-.wrapper .end .bubbles-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-.wrapper .end .bubbles-wrap .fact-bubble {
-  background-color: #fff;
-  border: 2px dashed #ff96c2;
-  border-radius: 50%;
-  width: 220px;
-  height: 220px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: popM;
-  font-size: 16px;
-  color: rgb(199, 125, 166);
-  padding: 30px;
-  text-align: center;
-  transition: transform 0.4s ease, box-shadow 0.3s ease;
-  position: relative;
-  cursor: default;
-}
-.wrapper .end .bubbles-wrap .fact-bubble:hover {
-  transform: scale(1.1) rotate(2deg);
-  box-shadow: 0px 10px 20px rgba(162, 132, 191, 0.3);
-  background-color: #f3eaff;
 }
 
 .fade-in {
@@ -1001,7 +960,7 @@ p {
   padding-left: 50px;
   justify-content: center;
   display: flex;
-  gap: 150px;
+  gap: 100px;
   opacity: 0;
   transform: translateY(50px) rotate(-5deg);
   transition: opacity 0.8s ease, transform 0.8s ease;
@@ -1120,7 +1079,7 @@ p {
 }
 .back2 .hover-area4 {
   top: 350px;
-  left: 1400px;
+  left: 1200px;
 }
 .back2 .hover-area5 {
   top: -100px;
@@ -1130,14 +1089,28 @@ p {
   display: none;
 }
 @media (max-width: 1650px) {
+  .back2 .welcome {
+    gap: 100px;
+    margin-left: 20px;
+  }
+  .back2 .hover-area1 {
+    left: 50px;
+    top: 300px;
+  }
+  .back2 .hover-area2 {
+    top: 400px;
+    left: 200px;
+  }
   .back2 .hover-area3 {
     left: 800px;
+    top: 400px;
   }
   .back2 .hover-area4 {
-    left: 1250px;
+    left: 1000px;
+    top: 200px;
   }
   .back2 .hover-area5 {
-    left: 1200px;
+    left: 1100px;
   }
   .back2 .tape {
     right: 550px;
@@ -1165,6 +1138,41 @@ p {
   }
   .back2 .tape {
     right: 450px;
+    display: none;
+  }
+}
+@media (max-width: 1350px) {
+  .back2 .welcome {
+    font-size: 20px;
+    gap: 80px;
+    margin-top: 50px;
+  }
+  .back2 .hover-areaSpotify {
+    width: 250px;
+    height: 100px;
+    font-size: 20px;
+    left: 100px;
+  }
+  .back2 .hover-area1 {
+    width: 250px;
+    height: 100px;
+    font-size: 20px;
+    left: 0px;
+  }
+  .back2 .hover-area2 {
+    left: 100px;
+  }
+  .back2 .hover-area3 {
+    left: 650px;
+  }
+  .back2 .hover-area4 {
+    left: 900px;
+  }
+  .back2 .hover-area5 {
+    left: 900px;
+  }
+  .back2 .tape {
+    right: 350px;
     display: none;
   }
 }
@@ -1361,7 +1369,7 @@ p {
   justify-content: center;
   gap: 100px;
   background-color: white;
-  width: 70%;
+  width: 80%;
   box-shadow: 10px 5px 20px 5px #ffc0e7;
   border-radius: 40px;
   height: 70px;
@@ -1646,7 +1654,7 @@ p {
   justify-content: center;
   gap: 100px;
   background-color: white;
-  width: 70%;
+  width: 85%;
   box-shadow: 10px 5px 20px 5px #ffc0e7;
   border-radius: 40px;
   height: 70px;
@@ -1920,7 +1928,7 @@ p {
   justify-content: center;
   gap: 100px;
   background-color: white;
-  width: 70%;
+  width: 85%;
   box-shadow: 10px 5px 20px 5px #ffc0e7;
   border-radius: 40px;
   height: 70px;
@@ -2160,7 +2168,7 @@ p {
   justify-content: center;
   gap: 100px;
   background-color: white;
-  width: 70%;
+  width: 85%;
   box-shadow: 10px 5px 20px 5px #ffc0e7;
   border-radius: 40px;
   height: 70px;
@@ -2343,7 +2351,7 @@ a:hover {
   justify-content: center;
   gap: 100px;
   background-color: white;
-  width: 70%;
+  width: 85%;
   box-shadow: 10px 5px 20px 5px #ffc0e7;
   border-radius: 40px;
   height: 70px;
@@ -2453,11 +2461,10 @@ footer {
   text-align: center;
   padding: 2rem;
   font-size: 0.9rem;
-  color: black;
 }
 
 .modal {
-  display: none; /* Hidden by default */
+  display: none;
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
