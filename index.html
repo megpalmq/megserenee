@@ -101,30 +101,35 @@
       </div>
     </div>
     <script>
-      const introVideo = document.getElementById("intro-video");
-      const welcome = document.querySelector(".welcome");
-      const mobileNav = document.querySelector(".mobile");
-      const file = document.querySelector(".file");
+      window.addEventListener('load', () => {
+        const introVideo = document.getElementById("intro-video");
+        const welcome = document.querySelector(".welcome");
+        const mobileNav = document.querySelector(".mobile");
+        const file = document.querySelector(".file");
     
-      introVideo.addEventListener("ended", () => {
-        introVideo.classList.add("fade-out");
+        // Ensure the video starts playing as soon as the page loads
+        if (introVideo) {
+          introVideo.play().catch((error) => {
+            // Handle autoplay failure (for example, on mobile where autoplay might be restricted)
+            console.log('Autoplay failed, trying to play video after interaction');
+          });
     
-        setTimeout(() => {
-          introVideo.remove();
-          welcome.classList.add("show");
+          // Listen for when the video ends
+          introVideo.addEventListener("ended", () => {
+            introVideo.classList.add("fade-out");
     
-          // Check if it's a mobile device before showing the mobile navigation
-          if (window.innerWidth <= 768) {
-            mobileNav.classList.add("show");  // Use class to show mobile nav
-          }
-        }, 500);
+            setTimeout(() => {
+              introVideo.remove();
+              welcome.classList.add("show");
+    
+              // Check if it's a mobile device before showing the mobile navigation
+              if (window.innerWidth <= 768) {
+                mobileNav.classList.add("show"); // Use class to show mobile nav
+              }
+            }, 500);
+          });
+        }
       });
-    
-      introVideo.addEventListener("ended", () => {
-        introVideo.classList.add("fade-out");
-    
-      });
-    
     </script>
   </body>
 </html>
